@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.template import loader
 from django.http import HttpResponse
+from . models import MahasiswaFkip, DosenFkip, StaffFkip
 
 
 # Create your views here.
@@ -9,7 +10,15 @@ def index(request):
     return HttpResponse(template.render())
 def fkip(request):
     template = loader.get_template('fkip.html')
-    return HttpResponse(template.render())
+    mahasiswa = MahasiswaFkip.objects.all()
+    dosen = DosenFkip.objects.all()
+    staff = StaffFkip.objects.all()
+    context = {
+        'dataMahasiswa': mahasiswa,
+        'dataDosen': dosen,
+        'dataStaff': staff,
+    }
+    return HttpResponse(template.render(context))
 def feb(request):
     template = loader.get_template('feb.html')
     return HttpResponse(template.render())

@@ -75,39 +75,83 @@
     </nav>
     <!-- akhir navbar -->
     <h1 class="text-center">FAKULTAS KEGURURAN DAN ILMU PENDIDIKAN</h1>
-
-    <h2>Data Mahasiswa FKIP</h2>
-    <table class="table table-striped">
-      <tr>
-        <th>NIM</th>
-        <th>Nama</th>
-        <th>TTL</th>
-        <th>Foto</th>
-      </tr>
-      {% for mahasiswa in dataMahasiswa %}
-      <tr>
-        <td>{{ mahasiswa.nim }}</td>
-        <td>{{ mahasiswa.nama }}</td>
-        <td>{{ mahasiswa.ttl }}</td>
-        <td><img src="{{ mahasiswa.foto }}" alt="foto" width="100px"></td>
-      </tr>
-      {% endfor %}
-    </table>
-
+    
     <h2>Data Dosen FKIP</h2>
     <table class="table table-striped">
       <tr>
+        <th>No</th>
         <th>NIP</th>
         <th>Nama</th>
         <th>TTL</th>
         <th>Foto</th>
+        <th>Email</th>
+        <th>Fakultas</th>
+        <th>Prodi</th>
+        <th>Alamat Rumah</th>
       </tr>
       {% for dosen in dataDosen %}
       <tr>
+        <td>{{ dosen.no }}</td>
         <td>{{ dosen.nip }}</td>
         <td>{{ dosen.nama }}</td>
         <td>{{ dosen.ttl }}</td>
         <td><img src="{{ dosen.foto }}" alt="foto"></td>
+        <td>{{ dosen.email }}</td>
+        <td>{{ dosen.fakultas }}</td>
+        <td>{{ dosen.prodi }}</td>
+        <td>{{ dosen.alamatrumah }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+    <h2>Data Staff FKIP</h2>
+    <table class="table table-striped">
+      <tr>
+        <th>No</th>
+        <th>NIP</th>
+        <th>Nama</th>
+        <th>TTL</th>
+        <th>Foto</th>
+        <th>Email</th>
+        <th>Unit</th>
+        <th>Alamat Rumah</th>
+      </tr>
+      {% for dosen in dataStaff %}
+      <tr>
+        <td>{{ staff.no }}</td>
+        <td>{{ staff.nip }}</td>
+        <td>{{ staff.nama }}</td>
+        <td>{{ staff.ttl }}</td>
+        <td><img src="{{ dosen.foto }}" alt="foto"></td>
+        <td>{{ staff.email }}</td>
+        <td>{{ staff.unit }}</td>
+        <td>{{ staff.alamatrumah }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+    <h2>Data Mahasiswa FKIP</h2>
+    <table class="table table-striped">
+      <tr>
+        <th>No</th>
+        <th>NIM</th>
+        <th>Nama</th>
+        <th>TTL</th>
+        <th>Foto</th>
+        <th>Email</th>
+        <th>Fakultas</th>
+        <th>Prodi</th>
+      </tr>
+      {% for mahasiswa in dataMahasiswa %}
+      <tr>
+        <td>{{ mahasiswa.nomor }}</td>
+        <td>{{ mahasiswa.nim }}</td>
+        <td>{{ mahasiswa.nama }}</td>
+        <td>{{ mahasiswa.ttl }}</td>
+        <td><img src="{{ mahasiswa.foto }}" alt="foto" width="100px"></td>
+        <td>{{ mahasiswa.email }}</td>
+        <td>{{ mahasiswa.fakultas }}</td>
+        <td>{{ mahasiswa.prodi }}</td>
       </tr>
       {% endfor %}
     </table>

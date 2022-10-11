@@ -6,7 +6,7 @@ from . models import  DosenFeb, StaffFeb, MahasiswaFeb
 from . models import  DosenFh, StaffFh, MahasiswaFh
 from . models import  DosenFisip, StaffFisip, MahasiswaFisip
 from . models import  DosenFk, StaffFk, MahasiswaFk    
-from . models import  DosenFkip, StaffFkip, MahasiswaFkip
+from . models import  ProdiFkip, DosenFkip, StaffFkip, MahasiswaFkip
 from . models import  DosenFt, StaffFt, MahasiswaFt
 from . models import  DosenPascasarjana, StaffPascasarjana, MahasiswaPascasarjana   
 
@@ -80,10 +80,12 @@ def fk(request):
 
 def fkip(request):
     template = loader.get_template('fkip.html')
+    prodi = ProdiFkip.objects.all()
     dosen = DosenFkip.objects.all()
     staff = StaffFkip.objects.all()
     mahasiswa = MahasiswaFkip.objects.all()
     context = {
+        'dataProdi': prodi,
         'dataDosen': dosen,
         'dataStaff': staff,
         'dataMahasiswa': mahasiswa,

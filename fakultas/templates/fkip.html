@@ -76,6 +76,24 @@
     <!-- akhir navbar -->
     <h1 class="text-center">FAKULTAS KEGURURAN DAN ILMU PENDIDIKAN</h1>
     
+    <h2>Data Prodi FKIP</h2>
+    <table class="table table-striped">
+      <tr>
+        <th>No</th>
+        <th>Nama Jurusan</th>
+        <th>Tahun Berdiri</th>
+        <th>Kepala Jurusan</th>
+      </tr>
+      {% for prodi in dataProdi %}
+      <tr>
+        <td>{{ prodi.nomor }}</td>
+        <td>{{ prodi.namajurusan }}</td>
+        <td>{{ prodi.tahunberdiri }}</td>
+        <td>{{ prodi.kepalajurusan }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
     <h2>Data Dosen FKIP</h2>
     <table class="table table-striped">
       <tr>
@@ -91,7 +109,7 @@
       </tr>
       {% for dosen in dataDosen %}
       <tr>
-        <td>{{ dosen.no }}</td>
+        <td>{{ dosen.nomor }}</td>
         <td>{{ dosen.nip }}</td>
         <td>{{ dosen.nama }}</td>
         <td>{{ dosen.ttl }}</td>
@@ -116,9 +134,9 @@
         <th>Unit</th>
         <th>Alamat Rumah</th>
       </tr>
-      {% for dosen in dataStaff %}
+      {% for staff in dataStaff %}
       <tr>
-        <td>{{ staff.no }}</td>
+        <td>{{ staff.nomor }}</td>
         <td>{{ staff.nip }}</td>
         <td>{{ staff.nama }}</td>
         <td>{{ staff.ttl }}</td>

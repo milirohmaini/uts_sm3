@@ -208,6 +208,15 @@ class MahasiswaFk(models.Model):
     def _str_(self):
         return "{}".format(self.nama)
 
+class ProdiFkip(models.Model):
+    nomor = models.CharField(max_length=300, null=True)
+    namajurusan = models.CharField(max_length=100, null=True)
+    tahunberdiri = models.CharField(max_length=50)
+    namakajur = models.CharField(max_length=50)
+
+    def _str_(self):
+        return "{}".format(self.nama)
+    
 
 class DosenFkip(models.Model):
     nomor = models.CharField(max_length=300, null=True)
@@ -252,6 +261,8 @@ class MahasiswaFkip(models.Model):
 
     def _str_(self):
         return "{}".format(self.nama)
+
+
 
 class DosenFt(models.Model):
     nip = models.CharField(max_length=50)

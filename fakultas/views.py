@@ -8,7 +8,7 @@ from . models import  DosenFisip, StaffFisip, MahasiswaFisip
 from . models import  DosenFk, StaffFk, MahasiswaFk    
 from . models import  ProdiFkip, DosenFkip, StaffFkip, MahasiswaFkip
 from . models import  DosenFt, StaffFt, MahasiswaFt
-from . models import  DosenPascasarjana, StaffPascasarjana, MahasiswaPascasarjana   
+from . models import  DosenPascasarjana, StaffPascasarjana, MahasiswaPascasarjana   sdsfsfsgsgs
 
 
 

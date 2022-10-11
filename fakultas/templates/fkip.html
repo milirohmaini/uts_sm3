@@ -174,6 +174,88 @@
       {% endfor %}
     </table>
 
+    <h2>Data Akreditasi FKIP</h2>
+    <table class="table table-striped">
+      <tr>
+        <th>NIlai</th>
+        </tr>
+      {% for akreditasi in dataAkreditasi %}
+      <tr>
+        <td>{{ akreditasi.nilai }}</td>
+        </tr>
+      {% endfor %}
+    </table>
+
+    <h2>Data Hmj FKIP</h2>
+    <table class="table table-striped">
+      <tr>
+        <th>No</th>
+        <th>Nama HMJ</th>
+        </tr>
+      {% for hmj in dataHmj %}
+      <tr>
+        <td>{{ hmj.nomor }}</td>
+        <td>{{ hmj.namahmj }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+    <h2>Data Ruangan FKIP</h2>
+    <table class="table table-striped">
+      <tr>
+        <th>No</th>
+        <th>Nama Ruangan</th>
+        </tr>
+      {% for ruangan in dataRuangan %}
+      <tr>
+        <td>{{ ruangan.nomor }}</td>
+        <td>{{ ruangan.namaruangan }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+    <h2>Data Ukm FKIP</h2>
+    <table class="table table-striped">
+      <tr>
+        <th>No</th>
+        <th>Nama UKM</th>
+        </tr>
+      {% for ukm in dataUkm %}
+      <tr>
+        <td>{{ ukm.nomor }}</td>
+        <td>{{ ukm.namaukm }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+    <h2>Data duta FKIP</h2>
+    <table class="table table-striped">
+      <tr>
+        <th>No</th>
+        <th>Nama duta</th>
+        </tr>
+      {% for duta in dataDuta %}
+      <tr>
+        <td>{{ duta.nomor }}</td>
+        <td>{{ duta.namaduta }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+    <h2>Data Mata Kuliah FKIP</h2>
+    <table class="table table-striped">
+      <tr>
+        <th>No</th>
+        <th>Nama Mata Kuliah</th>
+        </tr>
+      {% for matakuliah in dataMatakuliah %}
+      <tr>
+        <td>{{ matakuliah.nomor }}</td>
+        <td>{{ matakuliah.namamatakuliah }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
 <br></br>
 <br></br>
 <br></br>

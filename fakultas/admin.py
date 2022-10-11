@@ -4,7 +4,7 @@ from . models import DosenFeb, StaffFeb, MahasiswaFeb
 from . models import DosenFh, StaffFh, MahasiswaFh
 from . models import DosenFisip, StaffFisip, MahasiswaFisip
 from . models import DosenFk, StaffFk, MahasiswaFk
-from . models import ProdiFkip, DosenFkip, StaffFkip, MahasiswaFkip
+from . models import ProdiFkip, DosenFkip, StaffFkip, MahasiswaFkip, AkreditasiFkip, HmjFkip, RuanganFkip, UkmFkip, DutaFkip, MatakuliahFkip
 from . models import DosenFt, StaffFt, MahasiswaFt
 from . models import DosenPascasarjana, StaffPascasarjana, MahasiswaPascasarjana  
 
@@ -36,6 +36,12 @@ admin.site.register(DosenFkip)
 admin.site.register(StaffFkip)
 admin.site.register(MahasiswaFkip)
 admin.site.register(ProdiFkip)
+admin.site.register(HmjFkip)
+admin.site.register(RuanganFkip)
+admin.site.register(UkmFkip)
+admin.site.register(DutaFkip)
+admin.site.register(MatakuliahFkip)
+admin.site.register(AkreditasiFkip)
 
 admin.site.register(DosenFt)
 admin.site.register(StaffFt)

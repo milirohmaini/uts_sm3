@@ -262,6 +262,49 @@ class MahasiswaFkip(models.Model):
     def _str_(self):
         return "{}".format(self.nama)
 
+class AkreditasiFkip(models.Model):
+    nilai = models.CharField(max_length=50)
+   
+    def _str_(self):
+        return "{}".format(self.nama)
+
+class HmjFkip(models.Model):
+    nomor = models.CharField(max_length=300, null=True)
+    namahmj = models.CharField(max_length=50)
+   
+    def _str_(self):
+        return "{}".format(self.nama)
+
+class RuanganFkip(models.Model):
+    nomor = models.CharField(max_length=300, null=True)
+    namaruangan = models.CharField(max_length=100)
+    
+
+    def _str_(self):
+        return "{}".format(self.nama)
+
+class UkmFkip(models.Model):
+    nomor = models.CharField(max_length=300, null=True)
+    namaukm = models.CharField(max_length=100)
+
+    def _str_(self):
+        return "{}".format(self.nama)
+
+class DutaFkip(models.Model):
+    nomor = models.CharField(max_length=300, null=True)
+    namaduta = models.CharField(max_length=100)
+
+    def _str_(self):
+        return "{}".format(self.nama)
+
+class MatakuliahFkip(models.Model):
+    nomor = models.CharField(max_length=300, null=True)
+    namamatakuliah = models.CharField(max_length=100)
+
+    def _str_(self):
+        return "{}".format(self.nama)
+
+
 
 
 class DosenFt(models.Model):

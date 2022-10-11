@@ -6,9 +6,9 @@ from . models import  DosenFeb, StaffFeb, MahasiswaFeb
 from . models import  DosenFh, StaffFh, MahasiswaFh
 from . models import  DosenFisip, StaffFisip, MahasiswaFisip
 from . models import  DosenFk, StaffFk, MahasiswaFk    
-from . models import  ProdiFkip, DosenFkip, StaffFkip, MahasiswaFkip
+from . models import  ProdiFkip, DosenFkip, StaffFkip, MahasiswaFkip, AkreditasiFkip, HmjFkip, RuanganFkip, UkmFkip, DutaFkip, MatakuliahFkip
 from . models import  DosenFt, StaffFt, MahasiswaFt
-from . models import  DosenPascasarjana, StaffPascasarjana, MahasiswaPascasarjana   sdsfsfsgsgs
+from . models import  DosenPascasarjana, StaffPascasarjana, MahasiswaPascasarjana   
 
 
 
@@ -84,11 +84,23 @@ def fkip(request):
     dosen = DosenFkip.objects.all()
     staff = StaffFkip.objects.all()
     mahasiswa = MahasiswaFkip.objects.all()
+    akreditasi = AkreditasiFkip.objects.all()
+    hmj = HmjFkip.objects.all()
+    ruangan = RuanganFkip.objects.all()
+    ukm = UkmFkip.objects.all()
+    duta = DutaFkip.objects.all()
+    matakuliah = MatakuliahFkip.objects.all()
     context = {
         'dataProdi': prodi,
         'dataDosen': dosen,
         'dataStaff': staff,
         'dataMahasiswa': mahasiswa,
+        'akreditasi': akreditasi,
+        'dataHmj': hmj,
+        'dataRuangan': ruangan,
+        'dataUkm': ukm,
+        'dataDuta': duta,
+        'dataMatakuliah': matakuliah,
          
     }
     return HttpResponse(template.render(context))
